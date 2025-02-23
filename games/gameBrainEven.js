@@ -1,10 +1,11 @@
 import readlineSync from 'readline-sync';
-import { question, defineRandomNumber } from '/home/old_town_road/frontend-project-44/src/index.js'
+import { greeting, question, defineRandomNumber } from '/home/old_town_road/frontend-project-44/src/index.js'
  
 const gameBrainEven = () => {
   
-    console.log("Welcome to the Brain Games!");
-    const  userName = readlineSync.question('May I have your name? ');
+    greeting()
+    
+    const userName = readlineSync.question('May I have your name? ');
     console.log(`${'Hello'}, ${userName}!`);
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -12,10 +13,9 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 let i = 0;
 
 while (i < 3) {
-//const randomNumber = Math.floor(Math.random() * (100 - 0 + 1) + 0);
+
 const randomNumber = defineRandomNumber(100);
 
-// console.log(`${"Question: "}${randomNumber}`);
 question(randomNumber)
 
 const userAnswer = readlineSync.question('Your answer: ');

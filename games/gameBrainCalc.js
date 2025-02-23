@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
-import { question, defineRandomNumber } from '/home/old_town_road/frontend-project-44/src/index.js'
+import { greeting, question, defineRandomNumber } from '/home/old_town_road/frontend-project-44/src/index.js'
 
 const gameBrainCalc = () => {
 
-    console.log("Welcome to the Brain Games!");
+    greeting()
+
     const  userName = readlineSync.question('May I have your name? ');
     console.log(`${'Hello'}, ${userName}!`);
 
@@ -12,27 +13,25 @@ const gameBrainCalc = () => {
 let i = 0;
 
 while (i < 3) {
-// const randomNumberOne = Math.ceil(Math.random() * (100 - 0 + 1) + 0);
-// const randomNumberTwo = Math.floor(Math.random() * (100 - 0 + 1) + 0);
 
-const randomNumberOne = defineRandomNumber(50);
-const randomNumberTwo = defineRandomNumber(10);
+const randomNum1 = defineRandomNumber(50);
+const randomNum2 = defineRandomNumber(10);
 
 const signsColl = ['+', '-', '*'];
-// const randomIndex = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+
 const randomIndex = defineRandomNumber(2);
 
 const randomSign = signsColl[randomIndex];
 
-question(randomNumberOne, randomSign, randomNumberTwo)
+question(randomNum1, randomSign, randomNum2)
 
 let correctAnswer;
 if (randomSign === '+') {
-    correctAnswer = randomNumberOne + randomNumberTwo;  
+    correctAnswer = randomNum1 + randomNum2;  
 } else if (randomSign === '*') {
-    correctAnswer = randomNumberOne * randomNumberTwo;  
+    correctAnswer = randomNum1 * randomNum2;  
 } else if (randomSign === '-') {
-    correctAnswer = randomNumberOne - randomNumberTwo;  
+    correctAnswer = randomNum1 - randomNum2;  
 }
 
 const correctAnswerToString = correctAnswer.toString();

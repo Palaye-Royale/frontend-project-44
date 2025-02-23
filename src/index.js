@@ -1,14 +1,17 @@
 
+
+
+
 export const greeting = () => {
-   
+    console.log("Welcome to the Brain Games!");
 }
 
 export const question = (value1, value2 = '', value3 = '') => {
 console.log(`${"Question: "}${value1} ${value2} ${value3}`);
 }
 
-export const defineRandomNumber = (max) => {
-    const randomNumber = Math.floor(Math.random() * (max - 0 + 1) + 0);
+export const defineRandomNumber = (min = 0, max) => {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
     return randomNumber;
 }
 
