@@ -30,8 +30,7 @@ while (currentNum1 !== 0 && currentNum2 !== 0) {
     }
    
 }
-const correctAnswer = currentNum1 + currentNum2;;
-const correctAnswerToString = correctAnswer.toString();
+const correctAnswerToString = (currentNum1 + currentNum2).toString();
 const userAnswer = readlineSync.question('Your answer: ');
 
 
