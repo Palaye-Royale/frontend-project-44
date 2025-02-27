@@ -1,51 +1,54 @@
 import readlineSync from 'readline-sync';
-import { greeting, question, defineRandomNumber } from '/home/old_town_road/frontend-project-44/src/index.js'
+import {
+  greeting,
+  question,
+  defineRandomNumber,
+} from '../src/index.js';
 
 const gameBrainCalc = () => {
+  greeting();
 
-    greeting()
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`${'Hello'}, ${userName}!`);
 
-    const  userName = readlineSync.question('May I have your name? ');
-    console.log(`${'Hello'}, ${userName}!`);
+  console.log('What is the result of the expression?');
 
-    console.log('What is the result of the expression?');
+  let victoryCounter = 0;
 
-let victoryCounter = 0;
+  while (victoryCounter < 3) {
+    const randomNum1 = defineRandomNumber(50);
+    const randomNum2 = defineRandomNumber(10);
 
-while (victoryCounter < 3) {
+    const signsColl = ['+', '-', '*'];
 
-const randomNum1 = defineRandomNumber(50);
-const randomNum2 = defineRandomNumber(10);
+    const randomIndex = defineRandomNumber(2);
 
-const signsColl = ['+', '-', '*'];
+    const randomSign = signsColl[randomIndex];
 
-const randomIndex = defineRandomNumber(2);
+    question(randomNum1, randomSign, randomNum2);
 
-const randomSign = signsColl[randomIndex];
+    let correctAnswer;
+    if (randomSign === '+') {
+      correctAnswer = randomNum1 + randomNum2;
+    } else if (randomSign === '*') {
+      correctAnswer = randomNum1 * randomNum2;
+    } else if (randomSign === '-') {
+      correctAnswer = randomNum1 - randomNum2;
+    }
 
-question(randomNum1, randomSign, randomNum2)
+    const correctAnswerToString = correctAnswer.toString();
+    const userAnswer = readlineSync.question('Your answer: ');
 
-let correctAnswer;
-if (randomSign === '+') {
-    correctAnswer = randomNum1 + randomNum2;  
-} else if (randomSign === '*') {
-    correctAnswer = randomNum1 * randomNum2;  
-} else if (randomSign === '-') {
-    correctAnswer = randomNum1 - randomNum2;  
-}
-
-const correctAnswerToString = correctAnswer.toString();
-const userAnswer = readlineSync.question('Your answer: ');
-
-if (userAnswer === correctAnswerToString) {
-        console.log("Correct!")
-        victoryCounter +=1;
-} else {
-   console.log(`'${userAnswer}' ${"is wrong answer ;("}. ${"Correct answer was"} '${correctAnswerToString}'.\n${"Let's try again"}, ${userName}!`);
-   victoryCounter = 0;
-}
-
-}
-console.log(`${"Congratulations"}, ${userName}!`)
-}
+    if (userAnswer === correctAnswerToString) {
+      console.log('Correct!');
+      victoryCounter += 1;
+    } else {
+      console.log(
+        `'${userAnswer}' ${'is wrong answer ;('}. ${'Correct answer was'} '${correctAnswerToString}'.\n${"Let's try again"}, ${userName}!`,
+      );
+      victoryCounter = 0;
+    }
+  }
+  console.log(`${'Congratulations'}, ${userName}!`);
+};
 export default gameBrainCalc;

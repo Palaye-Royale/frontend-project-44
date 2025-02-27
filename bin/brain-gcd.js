@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gameBrainGcd from '/home/old_town_road/frontend-project-44/games/gameBrainGcd.js'
+import gameBrainGcd from '../games/gameBrainGcd.js';
 
-gameBrainGcd()
+gameBrainGcd();

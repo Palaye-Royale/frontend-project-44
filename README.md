@@ -1,22 +1,20 @@
 ### Hexlet tests and linter status:
+
 [![Actions Status](https://github.com/Palaye-Royale/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Palaye-Royale/frontend-project-44/actions)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/08bccbd31b13c92f9f2b/maintainability)](https://codeclimate.com/github/Palaye-Royale/frontend-project-44/maintainability)
 
-*Запись brain-even:*
-https://asciinema.org/a/R3jr5Vfeo5iIOpU4D7n98bpEd
+_Запись brain-even:_
+https://asciinema.org/a/OnWky7YAUjRx7SjTyvorSPYDI
 
+_Запись brain-calc:_
+https://asciinema.org/a/eihE34jljVZkTaF5hIupDNU4V
 
-*Запись brain-calc:*
-https://asciinema.org/connect/4a6b13dc-7968-49f4-8389-50447b5dd626
+_Запись brain-gcd:_
+https://asciinema.org/a/U57PrMduahNq3lRrXPBpWm23V
 
+_Запись brain-progress_
+https://asciinema.org/a/FXCdNTrOYDE2gGtyetymB3Xxx
 
-*Запись brain-gcd:*
-https://asciinema.org/a/jwXUdPz4uIiKKdFyFFixqAi4m
-
-
-*Запись brain-progress*
-https://asciinema.org/a/qkVN4P2T0R6b7fk7KZd7Lr3FL
-
-
-*Запись gameBrainPrime*
-https://asciinema.org/a/G8iOGZfLzmJSjFeCNySkybMXz
+_Запись brain-prime_
+https://asciinema.org/a/YC84G0a2JhrUdaxB4QH077L5R

@@ -1,52 +1,56 @@
 import readlineSync from 'readline-sync';
-import { greeting, question, defineRandomNumber } from '/home/old_town_road/frontend-project-44/src/index.js'
+import {
+  greeting,
+  question,
+  defineRandomNumber,
+} from '../src/index.js';
 
 const gameBrainPrime = () => {
+  greeting();
 
-greeting()
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`${'Hello'}, ${userName}!`);
 
-    const userName = readlineSync.question('May I have your name? ');
-    console.log(`${'Hello'}, ${userName}!`);
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
+  let victoryCounter = 0;
 
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  while (victoryCounter < 3) {
+    const randomNumber = defineRandomNumber(100);
 
-let victoryCounter = 0;
+    question(randomNumber);
 
-while (victoryCounter < 3) {
+    const primeNumbers = [
+      2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67,
+      71, 73, 79, 83, 89, 97,
+    ];
 
-const randomNumber = defineRandomNumber(100);
+    const userAnswer = readlineSync.question('Your answer: ');
 
-question(randomNumber)
+    // const userArr = [Number(userAnswer)];
+    let correctAnswer;
 
-const primeNumbers = [2, 3,	5, 7,	11,	13,	17,	19,	23,	29,	31,	37,	41,	43,	47,	53,	59,	61,	67,	71, 73,	79,	83,	89,	97];
-
-const userAnswer = readlineSync.question('Your answer: ');
-
-// const userArr = [Number(userAnswer)];
-let correctAnswer;
-
-// for (const num of primeNumbers) {  
+    // for (const num of primeNumbers) {
     if (primeNumbers.includes(randomNumber)) {
-        correctAnswer = 'yes';
+      correctAnswer = 'yes';
     } else {
-       correctAnswer = 'no';
+      correctAnswer = 'no';
     }
-//}
+    // }
 
-//console.log(11, correctAnswer)
+    // console.log(11, correctAnswer)
 
-if (userAnswer === correctAnswer) {
-    console.log("Correct!")
-    victoryCounter += 1
-
-} else {
-    console.log(`'${userAnswer}' ${"is wrong answer ;("}. ${"Correct answer was"} '${"no"}'.\n${"Let's try again"}, ${userName}!`);
-victoryCounter = 0;
-}
-}
-console.log(`${"Congratulations"}, ${userName}!`)
-}
-
+    if (userAnswer === correctAnswer) {
+      console.log('Correct!');
+      victoryCounter += 1;
+    } else {
+      console.log(
+        `'${userAnswer}' ${'is wrong answer ;('}. ${'Correct answer was'} '${'no'}'.\n${"Let's try again"}, ${userName}!`,
+      );
+      victoryCounter = 0;
+    }
+  }
+  console.log(`${'Congratulations'}, ${userName}!`);
+};
 
 export default gameBrainPrime;
