@@ -16,3 +16,7 @@ https://asciinema.org/a/jwXUdPz4uIiKKdFyFFixqAi4m
 
 *Запись brain-progress*
 https://asciinema.org/a/qkVN4P2T0R6b7fk7KZd7Lr3FL
+
+
+*Запись gameBrainPrime*
+https://asciinema.org/a/G8iOGZfLzmJSjFeCNySkybMXz
