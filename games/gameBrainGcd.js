@@ -10,9 +10,9 @@ const gameBrainGcd = () => {
 
     console.log('Find the greatest common divisor of given numbers.');
 
-    let i = 0;
+    let victoryCounter = 0;
 
-    while (i < 3) {
+    while (victoryCounter < 3) {
 
 const randomNum1 = defineRandomNumber(1, 100);
 const randomNum2 = defineRandomNumber(1, 100);
@@ -36,10 +36,10 @@ const userAnswer = readlineSync.question('Your answer: ');
 
 if (userAnswer === correctAnswerToString) {
     console.log("Correct!")
-    i +=1;
+    victoryCounter +=1;
 } else {
 console.log(`'${userAnswer}' ${"is wrong answer ;("}. ${"Correct answer was"} '${correctAnswerToString}'.\n${"Let's try again"}, ${userName}!`);
-i = 0;
+victoryCounter = 0;
 }
 }
 console.log(`${"Congratulations"}, ${userName}!`)

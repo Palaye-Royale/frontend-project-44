@@ -10,9 +10,9 @@ const gameBrainEven = () => {
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-let i = 0;
+let victoryCounter = 0;
 
-while (i < 3) {
+while (victoryCounter < 3) {
 
 const randomNumber = defineRandomNumber(100);
 
@@ -24,10 +24,10 @@ const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
 
 if (userAnswer === correctAnswer) {
         console.log("Correct!")
-        i +=1;
+        victoryCounter +=1;
 } else {
    console.log(`${"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again"}, ${userName}!`);
-   i = 0;
+   victoryCounter = 0;
 }
 }
 console.log(`${"Congratulations"}, ${userName}!`)

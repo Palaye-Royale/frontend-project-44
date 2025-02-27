@@ -10,9 +10,9 @@ const gameBrainCalc = () => {
 
     console.log('What is the result of the expression?');
 
-let i = 0;
+let victoryCounter = 0;
 
-while (i < 3) {
+while (victoryCounter < 3) {
 
 const randomNum1 = defineRandomNumber(50);
 const randomNum2 = defineRandomNumber(10);
@@ -39,10 +39,10 @@ const userAnswer = readlineSync.question('Your answer: ');
 
 if (userAnswer === correctAnswerToString) {
         console.log("Correct!")
-        i +=1;
+        victoryCounter +=1;
 } else {
    console.log(`'${userAnswer}' ${"is wrong answer ;("}. ${"Correct answer was"} '${correctAnswerToString}'.\n${"Let's try again"}, ${userName}!`);
-   i = 0;
+   victoryCounter = 0;
 }
 
 }
