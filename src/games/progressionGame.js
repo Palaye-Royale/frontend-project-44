@@ -38,7 +38,8 @@ const progressionGame = () => {
     if (userAnswer === correctAnswerToString) {
       console.log('Correct!')
       victoryCounter += 1
-    } else {
+    }
+    else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswerToString}'.`)
       console.log(`Let's try again, ${userName}!`)
       return

@@ -24,7 +24,8 @@ const gcdGame = () => {
     while (currentNum1 !== 0 && currentNum2 !== 0) {
       if (currentNum1 > currentNum2) {
         currentNum1 %= currentNum2
-      } else if (currentNum1 < currentNum2) {
+      }
+      else if (currentNum1 < currentNum2) {
         currentNum2 %= currentNum1
       }
     }
@@ -34,7 +35,8 @@ const gcdGame = () => {
     if (userAnswer === correctAnswerToString) {
       console.log('Correct!')
       victoryCounter += 1
-    } else {
+    }
+    else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswerToString}'.`)
       console.log(`Let's try again, ${userName}!`)
       return

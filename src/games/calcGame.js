@@ -27,9 +27,11 @@ const calcGame = () => {
     let correctAnswer
     if (randomSign === '+') {
       correctAnswer = randomNum1 + randomNum2
-    } else if (randomSign === '*') {
+    }
+    else if (randomSign === '*') {
       correctAnswer = randomNum1 * randomNum2
-    } else if (randomSign === '-') {
+    }
+    else if (randomSign === '-') {
       correctAnswer = randomNum1 - randomNum2
     }
 
@@ -39,7 +41,8 @@ const calcGame = () => {
     if (userAnswer === correctAnswerToString) {
       console.log('Correct!')
       victoryCounter += 1
-    } else {
+    }
+    else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${userName}!`)
       return
