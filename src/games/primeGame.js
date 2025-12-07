@@ -4,7 +4,7 @@ import {
   greeting,
   question,
   defineRandomNumber,
-} from '/home/old_town_road/frontend-project-44/src/index.js';
+} from '../index.js';
 
 const primeGame = () => {
 
