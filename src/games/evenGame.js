@@ -3,7 +3,6 @@ import readlineSync from 'readline-sync'
 import {
   defineRandomNumber,
   greeting,
-  question,
 } from '../index.js'
 
 const evenGame = () => {
@@ -15,7 +14,7 @@ const evenGame = () => {
   while (victoryCounter < 3) {
     const randomNumber = defineRandomNumber(100)
 
-    question(randomNumber)
+    console.log(`${'Question: '}${randomNumber}`)
 
     const userAnswer = readlineSync.question('Your answer: ')
 

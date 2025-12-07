@@ -2,7 +2,6 @@
 import readlineSync from 'readline-sync'
 import {
   greeting,
-  question,
   defineRandomNumber,
 } from '../index.js'
 
@@ -16,7 +15,7 @@ const primeGame = () => {
   while (victoryCounter < 3) {
     const randomNumber = defineRandomNumber(100)
 
-    question(randomNumber)
+    console.log(`${'Question: '}${randomNumber}`)
 
     const isPrime = (num) => {
       for (let i = 2, s = Math.sqrt(num); i <= s; i++) {

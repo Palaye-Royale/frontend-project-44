@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync'
 import {
   greeting,
-  question,
   defineRandomNumber,
 } from '../index.js'
 
@@ -22,7 +21,7 @@ const calcGame = () => {
 
     const randomSign = signsColl[randomIndex]
 
-    question(randomNum1, randomSign, randomNum2)
+    console.log(`${'Question: '}${randomNum1} ${randomSign} ${randomNum2}`)
 
     let correctAnswer
     if (randomSign === '+') {

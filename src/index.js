@@ -7,10 +7,6 @@ export const greeting = () => {
   return userName
 }
 
-export const question = (value1, value2 = '', value3 = '') => {
-  console.log(`${'Question: '}${value1} ${value2} ${value3}`)
-}
-
 export const defineRandomNumber = (max, min = 1) => {
   const randomNumber = Math.floor(Math.random() * (max - min + 1) + min)
   return randomNumber

@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync'
 import {
   greeting,
-  question,
   defineRandomNumber,
 } from '../index.js'
 
@@ -31,7 +30,7 @@ const progressionGame = () => {
 
     const arrayAPtoString = arrayAP.join(' ')
 
-    question(arrayAPtoString)
+    console.log(`${'Question: '}${arrayAPtoString}`)
 
     const userAnswer = readlineSync.question('Your answer: ')
 
